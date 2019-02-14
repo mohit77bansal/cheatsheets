@@ -3,7 +3,11 @@
 ## Node management
 
 - Initialize a swarm: `docker swarm init`
+
+- Master Node Command
 - List swarm nodes: `docker node ls`
+- Remove swarm dead nodes: `docker node rm $(docker node ls -q)`
+
 - Get the command for new nodes to join a swarm: `docker swarm join-token worker` or `docker swarm join-token worker`. The command prints the required command and token: E.g. To add a worker to this swarm, run the following command:
 
 ```
